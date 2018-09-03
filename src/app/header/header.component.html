@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark">
+    <button type="button" class="btn btn-outline-secondary">
+        <h3>Hi  {{ (userItem | async )?.firstName }}</h3>
+    </button>
+
+  <button class="btn btn-danger" (click)="onClickSignOut()">
+    <div class = 'icon'>
+      <i class="material-icons">
+          &nbsp;folder_shared&nbsp;
+          </i>
+          ออกจากระบบ
+        </div>
+    </button>
+
+</nav>

@@ -1,0 +1,33 @@
+<app-header></app-header>
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline" >
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" >
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<div class="card">
+  <div class="card-body">
+    <p> รหัสรายวิชา :{{dataid?.Coursecode}}</p>
+    <p> ชื่อรายวิชา :{{dataid?.NameThai}}</p>
+    <p> หน่วยกิต :{{dataid?.Credit}}</p>
+
+    <div *ngFor='let user of dataid?.Datareg'>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              Sec:{{user.Sec}}
+              <li *ngFor='let user of user.DayTime'>
+                วัน:{{user.Day}} เวลา{{user.Time}}
+              </li>
+              Teacher:{{user.T}} Midterm:{{user.Mid}} Final:{{user.Final}}
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-danger">เพิ่ม</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
