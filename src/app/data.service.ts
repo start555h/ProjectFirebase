@@ -11,16 +11,12 @@ export class DataService {
   // api: 'https://apireg.herokuapp.com/datareg?backto=home&option=0&courseid=1003564&?coursecode=523101&acadyear=2561&semester=1&avs608470185=55';
  // tslint:disable-next-line:max-line-length
  //  `https://apireg.herokuapp.com/datareg?backto=home&option=0&courseid=1003564&coursecode=523101&acadyear=2561&semester=1&avs608470185=55`
-
+ private courseid: string;
  constructor(private http: HttpClient, private af: AngularFireDatabase) {
  }
- getCouse() {
-   return this.http.get('https://jsonplaceholder.typicode.com/users');
- }
- getCouses() {
+ getCouses(coursecode) {
    // tslint:disable-next-line:max-line-length
-   return this.http.get('https://apireg.herokuapp.com/datareg?backto=home&courseid=1003564&coursecode=523101&acadyear=2561&semester=1&avs608470185=55')
+   return this.http.get('https://myapireg.herokuapp.com/getreg/' + coursecode)
    .map(res => res);
  }
-
 }

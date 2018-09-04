@@ -1,9 +1,10 @@
 <app-header></app-header>
 <nav class="navbar navbar-light bg-light">
-  <form class="form-inline" >
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" >
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <form #courseids="ngForm" (ngSubmit)="getIDcouse(courseid,courseids)" novalidate>
+    <input name="courseid" ngModel required #courseids="ngModel">
+    <button>Submit</button>
   </form>
+  {{courseids.value}}
 </nav>
 <div class="card">
   <div class="card-body">
@@ -23,7 +24,7 @@
               Teacher:{{user.T}} Midterm:{{user.Mid}} Final:{{user.Final}}
             </div>
             <div class="col-1">
-              <button type="button" class="btn btn-danger">เพิ่ม</button>
+              <button type="button" class="btn btn-danger" (click)= addUser(dataid)>เพิ่ม</button>
             </div>
           </div>
         </div>
