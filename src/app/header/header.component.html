@@ -1,15 +1,18 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          SUT Class-Scheduling
+        </a>
     <button type="button" class="btn btn-outline-secondary">
-        <h3>Hi  {{ (userItem | async )?.firstName }}</h3>
+        <h3>Hi {{ (userItem | async )?.firstName }}</h3>
     </button>
 
-  <button class="btn btn-danger" (click)="onClickSignOut()">
-    <div class = 'icon'>
-      <i class="material-icons">
-          &nbsp;folder_shared&nbsp;
-          </i>
-          ออกจากระบบ
+    <button class="btn btn-danger" (click)="onClickSignOut()">
+        <div class='icon'>
+            <i class="material-icons">
+                how_to_reg
+                </i>
+            ออกจากระบบ
         </div>
     </button>
-
 </nav>

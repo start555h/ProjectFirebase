@@ -1,34 +1,11 @@
 <app-header></app-header>
-<nav class="navbar navbar-light bg-light">
-  <form #courseids="ngForm" (ngSubmit)="getIDcouse(courseid,courseids)" novalidate>
-    <input name="courseid" ngModel required #courseids="ngModel">
-    <button>Submit</button>
-  </form>
-  {{courseids.value}}
-</nav>
-<div class="card">
-  <div class="card-body">
-    <p> รหัสรายวิชา :{{dataid?.Coursecode}}</p>
-    <p> ชื่อรายวิชา :{{dataid?.NameThai}}</p>
-    <p> หน่วยกิต :{{dataid?.Credit}}</p>
-
-    <div *ngFor='let user of dataid?.Datareg'>
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              Sec:{{user.Sec}}
-              <li *ngFor='let user of user.DayTime'>
-                วัน:{{user.Day}} เวลา{{user.Time}}
-              </li>
-              Teacher:{{user.T}} Midterm:{{user.Mid}} Final:{{user.Final}}
-            </div>
-            <div class="col-1">
-              <button type="button" class="btn btn-danger" (click)= addUser(dataid)>เพิ่ม</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="html">
+  <button mat-raised-button (click)="openDialog()"><i class="material-icons">
+      search
+    </i>ค้นหาเลย!</button>
+  <hr>
+  <mat-card class="fliedtable">
+    <app-table></app-table>
+  </mat-card>
+  <br>
 </div>

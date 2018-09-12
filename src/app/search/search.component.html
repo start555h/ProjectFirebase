@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]=coursecode [ngModelOptions]="{standalone: true}">
+    <button class="btn btn-outline-success my-2 my-sm-0" (click)=getIDcouse()>ค้นหา</button>
+  </form>
+</nav>
+<div class="card">
+  <div class="card-body">
+    <p> รหัสรายวิชา :{{dataid?.Coursecode}}</p>
+    <p> ชื่อรายวิชา :{{dataid?.NameThai}}</p>
+    <p> หน่วยกิต :{{dataid?.Credit}}</p>
+
+    <div *ngFor='let user of dataid?.Datareg'>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              Sec:{{user.Sec}}
+              <li *ngFor='let user of user.DayTime'>
+                วัน:{{user.Day}} เวลา{{user.Time}}
+              </li>
+              Teacher:{{user.T}} 
+              <br>
+              Midterm:วัน:{{user.Mid?.Date}} เวลา:{{user.Mid?.Time}} 
+              <br>
+              Final:วัน:{{user.Final?.Date}} เวลา:{{user.Final?.Time}} 
+          
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-danger" (click)= addUser(dataid)>เพิ่ม</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

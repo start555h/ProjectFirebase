@@ -1,7 +1,24 @@
 .content{
-  padding-top: 5%;
-  padding-left: 22%;
-  padding-right: 22%;
-    text-align: center;
+  padding-top: 8%;
+  padding-left: 3%;
+  padding-right: 4%;
+  padding-bottom: 12%;
+  text-align: center;
+  
 }
-
+.back {
+  padding-top: 2%;
+  padding-left: 63%;
+  padding-right: 2%;
+  padding-bottom: 0%;
+  background: url(../images/SUT_Class-Scheduling3.png);
+  text-align: center;
+   
+}
+.text {
+  color: rgb(255, 0, 106);
+}
+.color {
+  color: rgba(0, 0, 0, 0.884);
+  
+}

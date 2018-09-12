@@ -1,55 +1,73 @@
-<div>
-<div class="content">
-    <br>
-    <mat-card class ="card">
-  <h4>สมัครสมาชิกผู้ใช้ฟรี</h4><br><br>
+<div class="back">
+  <div class='color'>
 
-  <form autocomplete="off" novalidate class="form" [formGroup]="form">
-    <div class="input-group" style="padding-bottom: 10px">
-      <div class="input-group-prepend">
-        <div class="input-group-text" id="btnGroupAddon" style="width:70px">
-         <mat-icon>&nbsp;&nbsp;mail</mat-icon>
+
+    <mat-card class="content">
+      <br>
+      <h3>สมัครสมาชิกผู้ใช้ฟรี</h3><br><br>
+
+      <form autocomplete="off" novalidate class="form" [formGroup]="form">
+        <div class="input-group" style="padding-bottom: 20px">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon" style="width:70px">
+              <mat-icon>&nbsp;&nbsp;mail</mat-icon>
+            </div>
+          </div>
+          <input type="text" formControlName="email" class="form-control" placeholder="อีเมล" aria-label="Input group example"
+            aria-describedby="btnGroupAddon">
         </div>
-      </div>
-      <input type="text" formControlName="email" class="form-control"
-        placeholder="Email" aria-label="Input group example" aria-describedby="btnGroupAddon">
-    </div>
 
-    <div class="input-group" style="padding-bottom: 10px">
-      <div class="input-group-prepend">
-        <div class="input-group-text" id="btnGroupAddon" style="width:70px">
-            <i class="material-icons">
+        <div class="input-group" style="padding-bottom: 20px">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon" style="width:70px">
+              <i class="material-icons">
                 &nbsp;&nbsp;vpn_key
-                </i>
+              </i>
+            </div>
+          </div>
+          <input type="password" formControlName="password" class="form-control" placeholder="รหัสผ่านไม่น้อยกว่า 6 ตัว"
+            aria-label="Input group example" aria-describedby="btnGroupAddon" style="width:100px">
         </div>
-      </div>
-      <input type="password" formControlName="password" class="form-control"
-        placeholder="Password" aria-label="Input group example" aria-describedby="btnGroupAddon"style="width:100px">
-    </div>
 
 
-    <div class="input-group" style="padding-bottom: 10px">
-      <div class="input-group-prepend">
-        <div class="input-group-text" id="btnGroupAddon" style="width:70px">
-            <i class="material-icons">
+        <div class="input-group" style="padding-bottom: 20px">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon" style="width:70px">
+              <i class="material-icons">
                 &nbsp;&nbsp;account_box
-                </i>
-        </div>
-      </div>
-      <input type="text" placeholder="First Name" formControlName="firstName" class="form-control">
-      <div class="input-group-text" id="btnGroupAddon" style="width:70px">
-          <i class="material-icons">
+              </i>
+            </div>
+          </div>
+          <input type="text" placeholder="ชื่อ" formControlName="firstName" class="form-control">
+          <div class="input-group-text" id="btnGroupAddon" style="width:70px">
+            <i class="material-icons">
               &nbsp;&nbsp;supervisor_account
-          </i>
+            </i>
+          </div>
+          <input type="text" placeholder="สาขาวิชา" formControlName="lastName" class="form-control">
+          <br>
         </div>
-      <input type="text" placeholder="Branch" formControlName="lastName" class="form-control">
-    </div>
-    <hr>
-    <button type="button" class="btn btn-primary" (click)="onClickSignUp()">สมัครสมาชิก</button>
-   </form>
-  </mat-card>
+
+        <div class='text'>
+          <br>
+          **กรุณากรอกให้ครบ**
+        </div>
+        <hr>
+        <br>
+
+        <button type="button" class="btn btn-primary" (click)="onClickSignUp()">สมัครสมาชิก</button>
+
+        <br>
+      </form>
+    </mat-card>
+    <br>
   </div>
   <br>
   <br>
+
+</div>
+<div style="text-align:right">
+  <a routerLink="/signin">กลับสู่หน้าหลัก</a>
   <br>
+
 </div>

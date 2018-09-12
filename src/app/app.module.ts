@@ -8,7 +8,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
+import { SearchComponent } from './search/search.component';
 // firebase
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -24,7 +24,8 @@ import {JsonpModule, Jsonp, Response} from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
-import { HeaderlrComponent } from './headerlr/headerlr.component';
+import { TableComponent } from './table/table.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HeaderlrComponent } from './headerlr/headerlr.component';
     SignInComponent,
     HomeComponent,
     HeaderComponent,
-    HeaderlrComponent
+    SearchComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,10 @@ import { HeaderlrComponent } from './headerlr/headerlr.component';
     HttpClientJsonpModule,
     JsonpModule
   ],
+  entryComponents: [
+    SearchComponent
+  ],
+
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })

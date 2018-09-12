@@ -8,7 +8,8 @@ import {MatButtonModule,
   MatCardModule,
   MatTooltipModule,
   MatPaginatorModule,
-  MatButtonToggleModule
+  MatButtonToggleModule,
+  MatDialogModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +24,8 @@ imports: [MatButtonModule,
       MatCardModule,
       MatTooltipModule,
       MatPaginatorModule,
-      MatButtonToggleModule
+      MatButtonToggleModule,
+      MatDialogModule
      ],
 exports: [MatButtonModule,
       MatCheckboxModule,
@@ -35,7 +37,8 @@ exports: [MatButtonModule,
       MatCardModule,
       MatTooltipModule,
       MatPaginatorModule,
-      MatButtonToggleModule
+      MatButtonToggleModule,
+      MatDialogModule
      ],
 })
 export class MaterialModule { }

@@ -1,0 +1,12 @@
+.search{
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 70%;
+    text-align: right;
+  }
+  .form-inline{
+    width: auto;
+    float:left;
+    margin-right: 5px;
+  }
+  
