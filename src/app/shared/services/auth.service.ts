@@ -36,7 +36,6 @@ export class AuthService {
     return this.fromFirebaseAuthPromise(this.afAuth.auth.signInWithEmailAndPassword(email, password));
   }
 
-
   signUp(email, password) {
     return this.fromFirebaseAuthPromise(this.afAuth.auth.createUserWithEmailAndPassword(email, password));
   }

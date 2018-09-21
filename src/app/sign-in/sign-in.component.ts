@@ -39,7 +39,6 @@ export class SignInComponent implements OnInit {
       },
         err => alert(err.message)
       );
-
   }
 
 }

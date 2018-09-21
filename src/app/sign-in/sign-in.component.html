@@ -1,52 +1,42 @@
-<div class = "background">
- <div class="content">
-  <mat-card>
-  <h4>ลงชื่อเข้าใช้</h4><br><br>
+<div class="background">
+  <div class="content">
+    <mat-card>
+      <h4>ลงชื่อเข้าใช้</h4><br><br>
 
-  <form autocomplete="off" novalidate class="form" [formGroup]="form">
-      <div class = 'inputfix'>
-    <mat-form-field appearance="outline">
-      <mat-label>Enter your email</mat-label>
-      <input id ="email"
-      matInput
-      formControlName="email"
-      />
-      <mat-icon mat-raised-button matSuffix  class="material-icons.md-24"
-      matTooltip="Ex: xxx@xxx.com"
-      matTooltipPosition="right"
-      aria-label="Button that displays a tooltip in various positions">&#xE87C;</mat-icon>
-    </mat-form-field>
-  </div>
-   <div class = 'inputfix'>
-    <mat-form-field appearance="outline" >
-      <mat-label>Enter your Password</mat-label>
-  <input id ="password"
-   matInput
-   formControlName="password"
-   [type]="hide ?'password':'text'"
-  />
-  <mat-icon mat-raised-button matSuffix (click)="hide = !hide"
-    matTooltip="ClickShowPassword"
-    matTooltipPosition="right">
-    {{hide ? 'visibility' : 'visibility_off'}}
-  </mat-icon>
-   </mat-form-field>
-  </div>
-    <div class = 'textright'>
-        ยังไม่มีบัญชีหรือ <a routerLink="/signup">สร้างได้เลย!</a>
-    </div>
-    <hr>
-    </form>
-
-    <button type="button" class="btn btn-primary" (click)="onClickSignIn()">เข้าสู่ระบบ</button>
-  </mat-card>
+      <form autocomplete="off" novalidate class="form" [formGroup]="form">
+        <div class='inputfix'>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input id="email" matInput formControlName="email" />
+            <mat-icon mat-raised-button matSuffix class="material-icons.md-24" matTooltip="Ex: xxx@xxx.com"
+              matTooltipPosition="right" aria-label="Button that displays a tooltip in various positions">&#xE87C;</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class='inputfix'>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your Password</mat-label>
+            <input id="password" matInput formControlName="password" [type]="hide ?'password':'text'" />
+            <mat-icon mat-raised-button matSuffix (click)="hide = !hide" matTooltip="ClickShowPassword"
+              matTooltipPosition="right">
+              {{hide ? 'visibility' : 'visibility_off'}}
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        <div class='textright'>
+          ยังไม่มีบัญชีหรือ <a routerLink="/signup">สร้างได้เลย!</a>
+        </div>
+        <hr>
+      </form>
+      <button type="button" class="btn btn-primary" (click)="onClickSignIn()">เข้าสู่ระบบ</button>
+     
+    </mat-card>
   </div>
   <br>
   <br>
-  <div class = 'backgroundbottom'>
-      <br>
+  <div class='backgroundbottom'>
+    <br>
   </div>
-  <div class = 'backgroundbottom1'>
-      <br>
+  <div class='backgroundbottom1'>
+    <br>
   </div>
 </div>

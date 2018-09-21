@@ -11,13 +11,13 @@
     <p> ชื่อรายวิชา :{{dataid?.NameThai}}</p>
     <p> หน่วยกิต :{{dataid?.Credit}}</p>
 
-    <div *ngFor='let user of dataid?.Datareg'>
+    <div *ngFor='let user of dataid?.Datareg ;index as i'>
       <div class="card">
         <div class="card-body">
           <div class="row">
-            <div class="col">
-              Sec:{{user.Sec}}
-              <li *ngFor='let user of user.DayTime'>
+            <div class="col" >
+              Sec:{{user.Sec}} {{i+1}}
+              <li *ngFor='let user of user.DayTime;index as j'>
                 วัน:{{user.Day}} เวลา{{user.Time}}
               </li>
               Teacher:{{user.T}} 
@@ -28,7 +28,7 @@
           
             </div>
             <div class="col-1">
-              <button type="button" class="btn btn-danger" (click)= addUser(dataid)>เพิ่ม</button>
+              <button type="button" class="btn btn-danger"  (click)= addUser(dataid,i)>เพิ่ม</button>
             </div>
           </div>
         </div>
